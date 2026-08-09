@@ -101,6 +101,7 @@
     box-shadow:var(--shadow);
     position:relative;
   }
+  .hero-photo img{width:100%;height:100%;object-fit:cover;}
   .photo-placeholder{
     display:flex;flex-direction:column;align-items:center;justify-content:center;
     gap:10px;color:#5b6b85;text-align:center;padding:20px;
@@ -154,7 +155,8 @@
 
   /* ---- STAFF PHOTOS ---- */
   .staff-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px;}
-  .staff-photo{aspect-ratio:1/1;border-radius:12px;background:var(--gray-bg);}
+  .staff-photo{aspect-ratio:1/1;border-radius:12px;background:var(--gray-bg);overflow:hidden;}
+  .staff-photo img{width:100%;height:100%;object-fit:cover;display:block;}
   .staff-caption{font-size:12px;color:var(--text-muted);text-align:center;margin-top:8px;}
 
   /* ---- WHY US (navy) ---- */
@@ -246,10 +248,7 @@
       </div>
     </div>
     <div class="hero-photo">
-      <div class="photo-placeholder">
-        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M3 18l5-5 4 4 3-3 6 6"/></svg>
-        <span>スタッフ相談時の写真<br>(差し替え用プレースホルダー)</span>
-      </div>
+      <img src="images/hero.jpg" alt="さくら祭典の専任スタッフ">
     </div>
   </div>
   <div class="wrap">
@@ -333,20 +332,20 @@
     <h2>顔の見える担当者が、最後まで対応します</h2>
     <div class="staff-grid">
       <div>
-        <div class="staff-photo"></div>
-        <div class="staff-caption">お電話でスタッフに相談</div>
+        <div class="staff-photo"><img src="images/staff-1.jpg" alt="笑顔でお出迎えするスタッフ"></div>
+        <div class="staff-caption">笑顔でお出迎えします</div>
       </div>
       <div>
-        <div class="staff-photo"></div>
-        <div class="staff-caption">手続き書類をわかりやすくご案内</div>
+        <div class="staff-photo"><img src="images/staff-2.jpg" alt="お電話でご相談に対応するスタッフ"></div>
+        <div class="staff-caption">お電話でのご相談も承ります</div>
       </div>
       <div>
-        <div class="staff-photo"></div>
-        <div class="staff-caption">専門家と一緒にご相談</div>
+        <div class="staff-photo"><img src="images/staff-3.jpg" alt="手続き書類を説明するスタッフ"></div>
+        <div class="staff-caption">手続き書類をわかりやすくご説明</div>
       </div>
       <div>
-        <div class="staff-photo"></div>
-        <div class="staff-caption">ご自宅への訪問も可能</div>
+        <div class="staff-photo"><img src="images/staff-4.jpg" alt="資料を案内するスタッフ"></div>
+        <div class="staff-caption">資料をご覧いただきながらご案内</div>
       </div>
     </div>
   </div>
