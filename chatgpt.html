@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>葬儀後の各種お手続きサポート｜さくら祭典</title>
+<meta name="description" content="相続・不動産・役所や銀行への届出など、葬儀のあとに必要な手続きを、さくら祭典の専任スタッフが最後まで伴走します。">
+<style>
+  :root{
+    --navy:#1b2c4a;
+    --navy-deep:#132038;
+    --teal:#2fa596;
+    --teal-bg:#e5f5f2;
+    --pink:#f6c9d8;
+    --pink-bg:#fdeef2;
+    --white:#ffffff;
+    --gray-bg:#eceef1;
+    --text-dark:#20263a;
+    --text-muted:#5b6270;
+    --border:#e2e5ea;
+    --radius:16px;
+    --shadow:0 10px 26px rgba(27,44,74,0.10);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    color:var(--text-dark);
+    line-height:1.8;
+    background:var(--white);
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px;}
+  section{padding:76px 0;}
+  h1,h2,h3{margin:0 0 16px;line-height:1.5;}
+  p{margin:0 0 16px;color:var(--text-muted);}
+
+  /* ---- header / nav ---- */
+  header.site-header{
+    position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--border);
+  }
+  .header-inner{max-width:1100px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
+  .logo{display:flex;align-items:center;gap:10px;}
+  .logo .mark{
+    width:36px;height:36px;border-radius:10px;
+    background:linear-gradient(135deg,#3aa88f,#1b2c4a);
+    display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;font-weight:700;
+  }
+  .logo .name{font-weight:800;font-size:19px;color:var(--navy);line-height:1.2;}
+  .logo .sub{font-size:10px;color:var(--text-muted);}
+  nav.main-nav{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:700;color:var(--navy);}
+  .header-right{display:flex;align-items:center;gap:16px;}
+  .header-tel{font-size:12px;color:var(--text-muted);text-align:right;white-space:nowrap;}
+  .header-tel b{display:block;font-size:17px;color:var(--navy);white-space:nowrap;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:14px 28px;border-radius:999px;font-weight:700;font-size:15px;
+    border:none;cursor:pointer;transition:opacity .15s ease;
+  }
+  .btn:hover{opacity:.85;}
+  .btn-primary{background:var(--navy);color:#fff;}
+  .btn-outline{background:#fff;color:var(--navy);border:2px solid var(--navy);}
+  .btn-sm{padding:10px 22px;font-size:13px;}
+
+  /* ---- hero ---- */
+  .hero{padding:56px 0 0;}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;}
+  .hero h1{font-size:36px;color:var(--navy);font-weight:800;}
+  .hero p.lead{font-size:15px;}
+  .cta-box{background:var(--gray-bg);border-radius:var(--radius);padding:22px 26px;max-width:340px;}
+  .cta-box .tel-link{display:flex;align-items:center;gap:12px;font-size:26px;font-weight:800;color:var(--navy);margin-bottom:10px;}
+  .cta-box .tel-link .phone-ic{
+    width:38px;height:38px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .cta-box .tel-link .phone-ic svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2;}
+  .pill{display:inline-block;background:var(--teal);color:#fff;font-size:12px;font-weight:700;padding:5px 14px;border-radius:999px;margin-bottom:14px;}
+  .hero-photo{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:5/4;}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;}
+
+  /* ---- stat bar ---- */
+  .stat-bar{border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-top:52px;}
+  .stat-bar .wrap{display:grid;grid-template-columns:repeat(4,1fr);}
+  .stat-item{text-align:center;padding:26px 10px;border-right:1px solid var(--border);}
+  .stat-item:last-child{border-right:none;}
+  .stat-item .stars{color:#e8b400;font-size:16px;letter-spacing:2px;margin-bottom:4px;}
+  .stat-item .big{font-size:22px;font-weight:800;color:var(--navy);}
+  .stat-item .label{font-size:12px;color:var(--text-muted);margin-top:4px;}
+
+  /* ---- pain / hub diagram ---- */
+  .eyebrow{display:inline-block;font-size:13px;font-weight:700;color:var(--teal);letter-spacing:.08em;margin-bottom:10px;}
+  h2.section-title{font-size:26px;color:var(--navy);text-align:center;}
+  p.section-lead{text-align:center;max-width:640px;margin-left:auto;margin-right:auto;}
+  .center-head{text-align:center;margin-bottom:44px;}
+
+  .pain-diagram{display:grid;grid-template-columns:1.4fr 0.7fr;gap:24px;align-items:center;margin-top:20px;}
+  .hub{position:relative;width:100%;max-width:520px;height:380px;margin:0 auto;}
+  .hub-center{
+    position:absolute;left:50%;top:66%;transform:translate(-50%,-50%);
+    width:96px;height:96px;border-radius:50%;background:var(--pink-bg);border:2px solid var(--pink);
+    display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:11px;font-weight:700;color:var(--navy);text-align:center;z-index:2;
+  }
+  .hub-center svg{width:30px;height:30px;stroke:var(--navy);fill:none;stroke-width:1.6;margin-bottom:2px;}
+  .hub-node{
+    position:absolute;width:110px;text-align:center;z-index:2;
+  }
+  .hub-node .ic{
+    width:56px;height:56px;border-radius:50%;background:#fff;border:2px solid var(--navy);margin:0 auto 8px;
+    display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);
+  }
+  .hub-node .ic svg{width:26px;height:26px;stroke:var(--navy);fill:none;stroke-width:1.6;}
+  .hub-node span{font-size:12px;font-weight:700;color:var(--text-dark);}
+  .hub-lines{position:absolute;inset:0;z-index:1;}
+  .hub-lines line{stroke:#c9ced8;stroke-width:2;stroke-dasharray:4 4;}
+
+  .stat-box{
+    background:var(--navy);color:#fff;border-radius:var(--radius);
+    padding:34px 26px;text-align:center;
+  }
+  .stat-box .num{font-size:44px;font-weight:800;line-height:1;}
+  .stat-box .num sub{font-size:15px;font-weight:400;display:block;margin-top:6px;}
+
+  /* ---- concierge (navy) ---- */
+  .concierge{background:var(--navy);color:#fff;}
+  .concierge .eyebrow{color:var(--teal);}
+  .concierge h2{color:#fff;font-size:26px;}
+  .concierge .wrap{display:grid;grid-template-columns:0.9fr 1.1fr;gap:48px;align-items:center;}
+  .concierge p.lead{color:rgba(255,255,255,.72);}
+  .callout{
+    display:inline-block;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);
+    border-radius:12px;padding:16px 22px;font-weight:700;font-size:15px;margin-top:6px;
+  }
+  .hub2{position:relative;width:100%;max-width:480px;height:360px;margin:0 auto;}
+  .hub2-left{
+    position:absolute;left:0;top:50%;transform:translateY(-50%);width:100px;text-align:center;z-index:2;
+  }
+  .hub2-left .ic{width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.1);margin:0 auto 8px;display:flex;align-items:center;justify-content:center;}
+  .hub2-left .ic svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.6;}
+  .hub2-left span{font-size:12px;color:rgba(255,255,255,.8);font-weight:700;}
+  .hub2-center{
+    position:absolute;left:38%;top:50%;transform:translate(-50%,-50%);
+    width:130px;height:130px;border-radius:50%;background:#fff;color:var(--navy);
+    display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;z-index:3;box-shadow:var(--shadow);
+  }
+  .hub2-center b{font-size:14px;}
+  .hub2-center span{font-size:10px;color:var(--text-muted);}
+  .hub2-node{
+    position:absolute;left:82%;display:flex;align-items:center;gap:10px;z-index:2;transform:translate(-0%,-50%);
+  }
+  .hub2-node .ic{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .hub2-node .ic svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:1.6;}
+  .hub2-node span{font-size:12px;font-weight:700;color:#fff;white-space:nowrap;}
+  .hub2-lines{position:absolute;inset:0;z-index:1;}
+  .hub2-lines line{stroke:rgba(255,255,255,.25);stroke-width:2;stroke-dasharray:4 4;}
+  .hub2-arrow{position:absolute;left:16%;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.5);font-size:20px;z-index:2;}
+
+  /* ---- why us ---- */
+  .why-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:18px;margin-top:36px;}
+  .why-card.photo{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);}
+  .why-card.photo img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;}
+  .why-card.text{display:flex;flex-direction:column;}
+  .why-card.text .thumb{border-radius:12px;overflow:hidden;margin-bottom:14px;aspect-ratio:4/3;}
+  .why-card.text .thumb img{width:100%;height:100%;object-fit:cover;}
+  .why-card.text .thumb.icon{
+    aspect-ratio:4/3;background:var(--teal-bg);display:flex;align-items:center;justify-content:center;
+  }
+  .why-card.text .thumb.icon svg{width:34px;height:34px;stroke:var(--teal);fill:none;stroke-width:1.6;}
+  .why-card h3{font-size:15px;color:var(--navy);margin:0 0 6px;}
+  .why-card p{font-size:13px;margin:0;}
+
+  /* ---- flow ---- */
+  .flow-row{display:flex;align-items:flex-start;justify-content:space-between;margin-top:44px;position:relative;}
+  .flow-row::before{content:"";position:absolute;top:28px;left:8%;right:8%;height:2px;background:var(--border);z-index:0;}
+  .flow-step{position:relative;z-index:1;flex:1;text-align:center;padding:0 12px;}
+  .flow-num{
+    width:56px;height:56px;border-radius:50%;background:var(--teal);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;margin:0 auto 12px;box-shadow:var(--shadow);
+  }
+  .flow-step .step-label{font-size:11px;font-weight:700;color:var(--teal);letter-spacing:.08em;}
+  .flow-step h3{font-size:15px;margin:4px 0 8px;color:var(--navy);}
+  .flow-step p{font-size:13px;margin:0;}
+
+  /* ---- FAQ table ---- */
+  .faq{background:#fafbfc;}
+  .faq-table{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+  .faq-row{display:grid;grid-template-columns:80px 1fr 28px;gap:20px;padding:22px 26px;border-bottom:1px solid var(--border);cursor:pointer;align-items:start;}
+  .faq-row:last-child{border-bottom:none;}
+  .faq-row .qtag{font-weight:800;color:var(--teal);font-size:15px;}
+  .faq-row .qbody h4{margin:0;font-size:15px;color:var(--navy);font-weight:700;}
+  .faq-row .qbody p{margin:12px 0 0;font-size:13px;display:none;}
+  .faq-row.open .qbody p{display:block;}
+  .faq-row .chev{color:var(--text-muted);font-size:14px;transition:transform .15s ease;}
+  .faq-row.open .chev{transform:rotate(180deg);}
+
+  /* ---- footer CTA ---- */
+  .cta-final{padding:0 0 76px;}
+  .cta-final .box{
+    background:var(--navy);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:1fr 1.3fr;align-items:stretch;
+  }
+  .cta-final .photo{aspect-ratio:auto;}
+  .cta-final .photo img{width:100%;height:100%;object-fit:cover;}
+  .cta-final .content{padding:44px;color:#fff;}
+  .cta-final h2{color:#fff;font-size:22px;}
+  .cta-final .tel-link{display:flex;align-items:center;gap:14px;font-size:30px;font-weight:800;margin:16px 0 22px;}
+  .cta-final .tel-link .phone-ic{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .cta-final .tel-link .phone-ic svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2;}
+  .cta-final .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.5);}
+
+  footer.site-footer{background:#fff;border-top:1px solid var(--border);padding:34px 0;}
+  footer.site-footer .wrap{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;}
+  footer.site-footer .logo .name{font-size:16px;}
+  footer.site-footer nav{display:flex;gap:20px;font-size:13px;color:var(--text-muted);flex-wrap:wrap;justify-content:center;}
+  footer.site-footer .copyright{font-size:11px;color:#a4a9b3;}
+
+  @media (max-width:480px){
+    .header-tel{font-size:10px;}
+    .header-tel b{font-size:13px;}
+    .header-inner{gap:10px;padding:12px 16px;}
+    .logo .sub{display:none;}
+  }
+  @media (max-width:900px){
+    nav.main-nav{display:none;}
+    .hero .wrap{grid-template-columns:1fr;}
+    .stat-bar .wrap{grid-template-columns:repeat(2,1fr);}
+    .stat-item:nth-child(2){border-right:none;}
+    .pain-diagram{grid-template-columns:1fr;}
+    .concierge .wrap{grid-template-columns:1fr;}
+    .why-grid{grid-template-columns:1fr 1fr;}
+    .flow-row{flex-direction:column;gap:26px;}
+    .flow-row::before{display:none;}
+    .faq-row{grid-template-columns:50px 1fr 20px;padding:18px;}
+    .cta-final .box{grid-template-columns:1fr;}
+    .cta-final .photo{aspect-ratio:16/9;}
+    section{padding:52px 0;}
+    .hero h1{font-size:27px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <span class="mark">桜</span>
+      <div>
+        <div class="name">さくら祭典</div>
+        <div class="sub">葬儀後の手続きサポート</div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="#pain">お悩み</a>
+      <a href="#service">サポート内容</a>
+      <a href="#flow">ご利用の流れ</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+    <div class="header-right">
+      <div class="header-tel">24時間365日対応<br><b>086-237-1234</b></div>
+      <a href="#contact" class="btn btn-primary btn-sm">無料相談</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>大切な人を見送ったあとも、<br>ひとりで悩まなくていい。</h1>
+      <p class="lead">相続、不動産、役所や銀行への届出——葬儀のあとに必要な手続きを、さくら祭典が最後まで伴走します。</p>
+      <div class="cta-box">
+        <a class="tel-link" href="tel:0862371234">
+          <span class="phone-ic"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 3a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.5c1 .4 2 .6 3 .7a2 2 0 0 1 1.7 2z"/></svg></span>
+          086-237-1234
+        </a>
+        <span class="pill">24時間365日対応</span>
+        <a href="#contact" class="btn btn-outline" style="width:100%;margin-top:4px;">お問い合わせフォーム</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="images/staff-4.jpg" alt="さくら祭典のスタッフによるご相談の様子">
+    </div>
+  </div>
+
+  <div class="stat-bar">
+    <div class="wrap">
+      <div class="stat-item"><div class="stars">★★★★★</div><div class="label">五つ星評価</div></div>
+      <div class="stat-item"><div class="big">97.8%</div><div class="label">葬儀の満足度</div></div>
+      <div class="stat-item"><div class="big" style="font-size:15px;">価格明確化宣言</div><div class="label">お見積り内容が明確</div></div>
+      <div class="stat-item"><div class="big" style="font-size:15px;">24時間365日</div><div class="label">対応可能</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PAIN / HUB DIAGRAM ================= -->
+<section id="pain">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="eyebrow">こんなお困りごとはありませんか?</span>
+      <h2 class="section-title">葬儀のあと、これだけの手続きが<br>一度に降りかかります</h2>
+    </div>
+
+    <div class="pain-diagram">
+      <div class="hub">
+        <svg class="hub-lines" viewBox="0 0 520 380">
+          <line x1="260" y1="250" x2="90" y2="70"/>
+          <line x1="260" y1="250" x2="260" y2="50"/>
+          <line x1="260" y1="250" x2="430" y2="70"/>
+          <line x1="260" y1="250" x2="70" y2="250"/>
+          <line x1="260" y1="250" x2="450" y2="250"/>
+        </svg>
+        <div class="hub-center">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+          ご遺族様
+        </div>
+        <div class="hub-node" style="left:10px;top:36px;">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M6 3h9l5 5v13H6z"/><path d="M15 3v5h5"/></svg></div>
+          <span>相続</span>
+        </div>
+        <div class="hub-node" style="left:205px;top:8px;">
+          <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="8" cy="12" r="2"/><path d="M13 10h6M13 14h4"/></svg></div>
+          <span>名義変更</span>
+        </div>
+        <div class="hub-node" style="left:376px;top:36px;">
+          <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg></div>
+          <span>年金</span>
+        </div>
+        <div class="hub-node" style="left:0px;top:210px;">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 11l8-6 8 6"/><path d="M5 10v10h14V10"/></svg></div>
+          <span>不動産売却</span>
+        </div>
+        <div class="hub-node" style="left:396px;top:210px;">
+          <div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+          <span>税金・銀行</span>
+        </div>
+      </div>
+
+      <div class="stat-box">
+        <div class="num">約100<sub>項目</sub></div>
+        <p style="color:rgba(255,255,255,.85);font-size:13px;margin-top:14px;">「年金は役所」「名義変更は司法書士」「税金は税理士」と、その都度別の窓口に連絡するのは大きな負担です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONCIERGE (navy) ================= -->
+<section class="concierge" id="service">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">さくら祭典が、あなたの総合窓口になります</span>
+      <h2>あちこちに何度も説明する<br>必要はありません</h2>
+      <p class="lead">さくら祭典は、お客様専任の「総合窓口(コンシェルジュ)」として、いま何が必要かを整理し、信頼できる提携専門家(司法書士・税理士など)へシームレスにおつなぎします。</p>
+      <div class="callout">何度も同じ説明を<br>しなくていい。</div>
+    </div>
+    <div class="hub2">
+      <svg class="hub2-lines" viewBox="0 0 480 360">
+        <line x1="180" y1="180" x2="420" y2="55"/>
+        <line x1="180" y1="180" x2="420" y2="130"/>
+        <line x1="180" y1="180" x2="420" y2="180"/>
+        <line x1="180" y1="180" x2="420" y2="230"/>
+        <line x1="180" y1="180" x2="420" y2="305"/>
+      </svg>
+      <div class="hub2-left">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+        <span>お客様<br>(ご遺族様)</span>
+      </div>
+      <div class="hub2-arrow">→</div>
+      <div class="hub2-center">
+        <b>専任<br>コンシェルジュ</b>
+        <span>(総合窓口)</span>
+      </div>
+      <div class="hub2-node" style="top:15%;">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M6 3h9l5 5v13H6z"/><path d="M15 3v5h5"/></svg></div>
+        <span>司法書士</span>
+      </div>
+      <div class="hub2-node" style="top:36%;">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+        <span>税理士</span>
+      </div>
+      <div class="hub2-node" style="top:50%;">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 11l8-6 8 6"/><path d="M5 10v10h14V10"/></svg></div>
+        <span>不動産</span>
+      </div>
+      <div class="hub2-node" style="top:64%;">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg></div>
+        <span>役所</span>
+      </div>
+      <div class="hub2-node" style="top:85%;">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg></div>
+        <span>銀行</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY US ================= -->
+<section>
+  <div class="wrap">
+    <div class="center-head">
+      <span class="eyebrow">なぜ、さくら祭典に任せられるのか</span>
+      <h2 class="section-title">葬儀からそのまま、伴走支援へ</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card photo">
+        <img src="images/hero.jpg" alt="さくら祭典のスタッフ">
+      </div>
+      <div class="why-card text">
+        <div class="thumb"><img src="images/staff-1.jpg" alt="ご家族に寄り添うスタッフ"></div>
+        <h3>ご家族を理解したスタッフ</h3>
+        <p>葬儀を通して、すでにご家族の状況やお気持ちを理解しているスタッフが、そのまま手続きの伴走を行います。初めて会う第三者に一から説明し直す必要はありません。</p>
+      </div>
+      <div class="why-card text">
+        <div class="thumb"><img src="images/staff-3.jpg" alt="専門家と連携するスタッフ"></div>
+        <h3>専門家との連携</h3>
+        <p>信頼できる提携専門家(司法書士・税理士・不動産の専門家など)と緊密に連携し、ワンストップでサポートします。複雑な手続きも安心してお任せください。</p>
+      </div>
+      <div class="why-card text">
+        <div class="thumb icon"><svg viewBox="0 0 24 24"><circle cx="8" cy="10" r="3"/><circle cx="16" cy="10" r="3"/><path d="M2 20c0-3 2.5-5 6-5s6 2 6 5M14 20c0-2.5 1.8-4.5 4.5-4.5S23 17.5 23 20"/></svg></div>
+        <h3>他社で葬儀をされた方も相談可能</h3>
+        <p>お葬式をどちらで行われた方でも、ご相談いただけます。ご遺族様が抱える複雑な手続きの重圧を取り除くお手伝いをいたします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FLOW ================= -->
+<section id="flow" style="background:#fafbfc;">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="eyebrow">ご利用の流れ</span>
+      <h2 class="section-title">ご相談から伴走支援まで</h2>
+    </div>
+    <div class="flow-row">
+      <div class="flow-step">
+        <div class="flow-num">1</div>
+        <div class="step-label">STEP 1</div>
+        <h3>まずはご相談</h3>
+        <p>今の状況やお困りごとを、専任スタッフが丁寧にお伺いします</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">2</div>
+        <div class="step-label">STEP 2</div>
+        <h3>状況整理・手続きのリストアップ</h3>
+        <p>必要な手続きを分かりやすく整理し、優先順位をご案内します</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">3</div>
+        <div class="step-label">STEP 3</div>
+        <h3>専門家へのご紹介・伴走支援</h3>
+        <p>信頼できる提携専門家へおつなぎし、最後まで寄り添います</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ (table) ================= -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="eyebrow">よくある質問</span>
+      <h2 class="section-title">ご相談の前に、よくいただくご質問</h2>
+    </div>
+
+    <div class="faq-table">
+      <div class="faq-row open" onclick="this.classList.toggle('open')">
+        <div class="qtag">Q1</div>
+        <div class="qbody">
+          <h4>相談に費用はかかりますか?</h4>
+          <p>さくら祭典の専任スタッフによる初期相談や、必要となるお手続きのスケジュール整理、専門家(司法書士や税理士など)へのご紹介はすべて無料です。実際に専門家へ実務をご依頼される段階で初めて費用が発生しますが、必ず事前に明確なお見積りをご提示し、ご納得いただいてからの着手となります。まずは何から手を付ければいいかの状況整理だけでも喜んでお手伝いいたしますので、安心してお声がけください。</p>
+        </div>
+        <div class="chev">▾</div>
+      </div>
+      <div class="faq-row" onclick="this.classList.toggle('open')">
+        <div class="qtag">Q2</div>
+        <div class="qbody">
+          <h4>さくら祭典で葬儀をしていませんが、相談できますか?</h4>
+          <p>はい、もちろん大歓迎です。過去に他社様でお葬式をされた方でも、気兼ねなくご相談いただけます。葬儀をした葬儀社ではその後のフォローがなかった、どこに相談していいか分からないと、私共のアフターサポートや法要をご利用される方は多くいらっしゃいます。お葬式の場所に関わらず、ご遺族様が抱える複雑な手続きの重圧を取り除くお手伝いをさせていただきます。</p>
+        </div>
+        <div class="chev">▾</div>
+      </div>
+      <div class="faq-row" onclick="this.classList.toggle('open')">
+        <div class="qtag">Q3</div>
+        <div class="qbody">
+          <h4>葬儀からずいぶん時間が経ちましたが、相談可能でしょうか?</h4>
+          <p>はい、全く問題ございません。相続や名義変更のお手続きは、ご葬儀から数ヶ月〜数年経ってから必要性に気づかれるケースも珍しくありません。ただし、2024年4月からの相続登記の義務化など、放置しておくと不利益を被る可能性がある法改正もございます。期限があるもの・急がないものを私たちが分かりやすく整理いたしますので、遅すぎるかもとご遠慮なさらず、まずは一度ご状況をお聞かせください。</p>
+        </div>
+        <div class="chev">▾</div>
+      </div>
+      <div class="faq-row" onclick="this.classList.toggle('open')">
+        <div class="qtag">Q4</div>
+        <div class="qbody">
+          <h4>何から手を付ければいいか、どの専門家に頼めばいいかも分からないのですが…</h4>
+          <p>どうぞそのままの状態でご相談ください。人が亡くなられた後の手続きは約100項目にも及び、ご遺族様だけで年金は役所、名義変更は司法書士、税金は税理士と調べながら連絡を取るのは、心身ともに大変なご負担となります。さくら祭典がお客様の総合窓口(コンシェルジュ)となり、現在のご状況をお伺いした上で必要な手続きをリストアップし、信頼できる提携専門家へシームレスにおつなぎします。お客様があちこちに何度も同じ説明をする手間を省き、ワンストップで伴走いたします。</p>
+        </div>
+        <div class="chev">▾</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER CTA ================= -->
+<section class="cta-final" id="contact">
+  <div class="wrap">
+    <div class="box">
+      <div class="photo"><img src="images/staff-2.jpg" alt="お電話でご相談に対応するスタッフ"></div>
+      <div class="content">
+        <h2>抱え込まず、まずは今のお困りごとをお聞かせください。</h2>
+        <a class="tel-link" href="tel:0862371234">
+          <span class="phone-ic"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 3a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.5c1 .4 2 .6 3 .7a2 2 0 0 1 1.7 2z"/></svg></span>
+          086-237-1234
+        </a>
+        <p style="color:rgba(255,255,255,.65);font-size:13px;margin-bottom:22px;">24時間365日対応</p>
+        <a href="https://www.sakura-saiten.co.jp/contact/" target="_blank" rel="noopener" class="btn btn-outline">お問い合わせフォーム</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="logo"><span class="mark">桜</span><span class="name">さくら祭典</span></div>
+    <nav>
+      <a href="#pain">お悩み</a>
+      <a href="#service">サポート内容</a>
+      <a href="#flow">ご利用の流れ</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+    <div class="copyright">&copy; さくら祭典</div>
+  </div>
+</footer>
+
+</body>
+</html>
